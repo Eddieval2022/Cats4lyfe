@@ -1,6 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Container } from "./App.styled";
+import Header from "./components/Header";
 
-function App() {
-}
+const App = () => {
+	return (
+		<Container>
+			<Header />
+		</Container>
+	);
+};
 export default App;
