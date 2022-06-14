@@ -10,7 +10,7 @@ export const HeadContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 
-	background-color: var(--color-1);
+	background-color: var(--color-2);
 
 	h1 {
 		width: 100%;
