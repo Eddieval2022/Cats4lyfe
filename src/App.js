@@ -1,5 +1,7 @@
 import "./App.css";
-
+import { Container, Temp, Content } from "./App.styled";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
 import { useEffect, useState } from "react";
 
 const App = () => {
@@ -25,18 +27,23 @@ const App = () => {
     };
     fetchData();
   }, []);
+  
+	return (
+		<Container>
+			<Header />
+			<Sidebar />
 
-  return (
-    <div className="CatPic">
-      {error && <p>{error}</p>}
-      {breed.slice(0, 25).map((cat) => (
-        <div className="info" key={cat.id}>
-          <h3>Name : {cat.name}</h3>
-          <img src={cat.image['url']} alt="cat" />
-        </div>
-      ))}
+      <div className="CatPic">
+        {error && <p>{error}</p>}
+        {breed.slice(0, 25).map((cat) => (
+          <div className="info" key={cat.id}>
+            <h3>Name : {cat.name}</h3>
+            <img src={cat.image['url']} alt="cat" />
+          </div>
+        ))}
     </div>
-  );
+		</Container>
+	);
 };
 
 export default App;
