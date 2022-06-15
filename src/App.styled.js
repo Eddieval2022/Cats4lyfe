@@ -63,5 +63,8 @@ export const ButtonWrapper = styled.div`
 		margin-right: 2.5px;
 		height: 49px;
 		border: #000 1px solid;
+
+		text-align: center;
+		line-height: 300%;
 	}
 `;
