@@ -1,4 +1,5 @@
 import "./App.css";
+
 import { useEffect, useState } from "react";
 
 const App = () => {
@@ -37,4 +38,5 @@ const App = () => {
     </div>
   );
 };
+
 export default App;
