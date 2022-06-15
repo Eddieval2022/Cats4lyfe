@@ -25,4 +25,8 @@ export const Temp = styled.div`
 	height: 400px;
 	border-radius: 15px;
 	background-color: var(--color-3);
+	img {
+		width: 300px;
+		height: 300px;
+	}
 `;
