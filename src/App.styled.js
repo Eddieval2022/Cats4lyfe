@@ -13,6 +13,7 @@ export const Container = styled.div`
 `;
 export const Content = styled.div`
 	width: calc(100vw - 100px);
+	min-height: 100vh;
 
 	display: flex;
 	flex-wrap: wrap;
@@ -35,7 +36,7 @@ export const Temp = styled.div`
 `;
 export const HeadContainer = styled.div`
 	width: 100vw;
-	height: 130px;
+	height: 132px;
 
 	display: flex;
 	flex-direction: row;
@@ -53,10 +54,14 @@ export const HeadContainer = styled.div`
 export const ButtonWrapper = styled.div`
 	width: 30%;
 	height: 54%;
-
-	button {
+	padding-bottom: 3px;
+	a {
+		-moz-appearance: button;
+		appearance: button;
 		width: 30%;
-		margin-bottom: 0;
+		margin-left: 2.5px;
+		margin-right: 2.5px;
 		height: 49px;
+		border: #000 1px solid;
 	}
 `;

@@ -1,16 +1,11 @@
 import "./App.css";
-import {
-	ButtonWrapper,
-	HeadContainer,
-	Container,
-	Temp,
-	Content,
-} from "./App.styled";
+import { ButtonWrapper, HeadContainer, Container } from "./App.styled";
 
 import Sidebar from "./components/Sidebar";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import About from "./pages/About";
 
 const App = () => {
 	const [breed, setBreed] = useState([]);
@@ -51,8 +46,8 @@ const App = () => {
 				<Sidebar />
 				<Routes>
 					<Route path="/" element={<Home error={error} breed={breed} />} />
+					<Route path="about" element={<About />} />
 				</Routes>
-				
 			</BrowserRouter>
 		</Container>
 	);
