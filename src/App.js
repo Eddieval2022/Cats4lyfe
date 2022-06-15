@@ -1,13 +1,20 @@
 import "./App.css";
-import { Container, Temp, Content } from "./App.styled";
-import Header from "./components/Header";
+import {
+	ButtonWrapper,
+	HeadContainer,
+	Container,
+	Temp,
+	Content,
+} from "./App.styled";
+
 import Sidebar from "./components/Sidebar";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 
 const App = () => {
 	const [breed, setBreed] = useState([]);
-	const [error, setError] = useState(null);
+    const [error, setError] = useState(null);
+    
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -32,9 +39,16 @@ const App = () => {
 	return (
 		<Container>
 			<BrowserRouter>
-				<Header />
+				<HeadContainer>
+					<h1>Cats4Lyfe</h1>
+					<ButtonWrapper>
+						<button>Home</button>
+						<button>About Us</button>
+						<button>Contact Us</button>
+					</ButtonWrapper>
+				</HeadContainer>
 				<Sidebar />
-                
+
 				<Content>
 					{error && <p>{error}</p>}
 					{breed.slice(0, 25).map((cat) => (
