@@ -20,9 +20,16 @@ export const Content = styled.div`
 `;
 
 export const Temp = styled.div`
-	margin: 50px;
-	width: 400px;
-	height: 400px;
+	margin: 15px auto 15px -15px;
+	
+	width: 530px;
+	height: auto;
+	padding-bottom: 15px;
 	border-radius: 15px;
 	background-color: var(--color-3);
+
+	img {
+		height: 300px;
+		width: 300px;
+	}
 `;
