@@ -5,10 +5,9 @@ import "./App.css";
 
 
 import Burger from "./components/Burger/Burger";
+
 import { faker } from "@faker-js/faker";
 import { ButtonWrapper, HeadContainer, Container, Footer } from "./App.styled";
-
-
 
 import Home from "./pages/Home";
 import Menu from "./components/Menu/Menu";
