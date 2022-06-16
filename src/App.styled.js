@@ -29,12 +29,14 @@ export const Temp = styled.div`
   border-radius: 15px;
   background-color: var(--color-3);
 
-  img {
-    height: 300px;
-    width: 400px;
-    object-fit: cover;
+
+	img {
     border-radius: 15px;
-  }
+		height: 300px;
+		width: 400px;
+    object-fit:cover;
+	}
+
 `;
 export const HeadContainer = styled.div`
   width: 100vw;
