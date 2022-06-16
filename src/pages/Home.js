@@ -1,19 +1,24 @@
+// import { Item } from "framer-motion/types/components/Reorder/Item";
 import { Content, CatCard } from "../App.styled";
-const Home = ({ error, breed }) => {
+
+const Home = ({ error, breed, breeds }) => {
 	return (
 		<Content>
 			{error && <p>{error}</p>}
-			{breed.slice(0, 25).map((cat) => (
-				<CatCard className="info" key={cat.id}>
-					<h3>Name : {cat.name}</h3>
-					<img src={cat.image["url"]} alt="cat" />
+			{breed.slice(0, 28).map((item, index) => (
+				<CatCard className="info" key={item.id}>
+					<h3>{item.name}</h3>
+					<img src={item.pics} alt="cat" />
 					<br />
-					<p>Price: £0.00</p>
+					<p>£{item.price}</p>
 					<button>Add to cart</button>
 				</CatCard>
 			))}
 		</Content>
 	);
+
+
+
 };
 
 export default Home;
