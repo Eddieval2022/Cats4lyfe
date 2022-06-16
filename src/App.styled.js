@@ -20,7 +20,7 @@ export const Content = styled.div`
 	justify-content: space-around;
 `;
 
-export const Temp = styled.div`
+export const CatCard = styled.div`
 	margin: 15px auto 15px -15px;
 
 	width: 530px;
