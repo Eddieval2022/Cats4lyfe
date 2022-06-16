@@ -3,12 +3,9 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 
 import "./App.css";
 
-
 import Burger from "./components/Burger/Burger";
 import { faker } from "@faker-js/faker";
 import { ButtonWrapper, HeadContainer, Container, Footer } from "./App.styled";
-
-
 
 import Home from "./pages/Home";
 import Menu from "./components/Menu/Menu";
@@ -16,11 +13,10 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 const App = () => {
-
-  const [breed, setBreed] = useState([]);
-  const [error, setError] = useState(null);
+	const [breed, setBreed] = useState([]);
+	const [error, setError] = useState(null);
 	const [openMenu, setOpenMenu] = useState(false);
-
+	const [cart, setCart] = useState([]);
 
 	const fetchFaker = () => {
 		const array = [];
@@ -31,7 +27,6 @@ const App = () => {
 		}
 		return array;
 	};
-
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -45,7 +40,7 @@ const App = () => {
 					throw new Error(response.statusText);
 				}
 				const data = await response.json();
-				
+
 				fakeData = fakeData.map((cat, i) => {
 					cat.pics = data[i]["image"].url;
 					cat.breed = data[i].name;
@@ -76,21 +71,22 @@ const App = () => {
 					</ButtonWrapper>
 				</HeadContainer>
 
-
 				<Burger openMenu={openMenu} setOpenMenu={setOpenMenu} />
 				<Menu openMenu={openMenu} />
 
 				<Routes>
-					<Route path="/" element={<Home error={error} breed={breed} />} />
+					<Route
+						path="/"
+						element={
+							<Home error={error} breed={breed} cart={cart} setCart={setCart} />
+						}
+					/>
 					<Route path="about" element={<About />} />
 					<Route path="contact" element={<Contact />} />
 				</Routes>
 			</BrowserRouter>
 		</Container>
 	);
-
-
-
 };
 
 export default App;

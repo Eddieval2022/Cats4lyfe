@@ -1,7 +1,7 @@
 // import { Item } from "framer-motion/types/components/Reorder/Item";
 import { Content, CatCard } from "../App.styled";
-
-const Home = ({ error, breed, breeds }) => {
+// setCart(item.name, item.image, item.price)
+const Home = ({ error, breed, cart, setCart }) => {
 	return (
 		<Content>
 			{error && <p>{error}</p>}
@@ -11,14 +11,13 @@ const Home = ({ error, breed, breeds }) => {
 					<img src={item.pics} alt="cat" />
 					<br />
 					<p>£{item.price}</p>
-					<button>Add to cart</button>
+					<button onClick={() => {
+						setCart([...cart, { index: index, name: item.name, image: item.pics, price: item.price}]);
+					}}>Add to cart</button>
 				</CatCard>
 			))}
 		</Content>
 	);
-
-
-
 };
 
 export default Home;
