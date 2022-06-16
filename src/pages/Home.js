@@ -1,5 +1,6 @@
 // import { Item } from "framer-motion/types/components/Reorder/Item";
 import { Content, Temp } from "../App.styled";
+
 const Home = ({ error, breed, breeds }) => {
 	return (
 		<Content>
@@ -15,6 +16,9 @@ const Home = ({ error, breed, breeds }) => {
 			))}
 		</Content>
 	);
+
+
+
 };
 
 export default Home;

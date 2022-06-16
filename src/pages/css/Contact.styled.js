@@ -1,41 +1,41 @@
 import styled from "styled-components";
 
 export const ContactForm = styled.form`
-background-color: var(--color-3);
+  background-color: var(--color-3);
 
-width: 600px;
-height: 280px;
+  width: 600px;
+  height: 280px;
 
-margin-top: 50px;
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-justify-content: space-around;
-padding-bottom: 30px;
-border-radius: 30px;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 30px;
+  border-radius: 30px;
 `;
 export const InputWrapper = styled.div`
-width: 90%;
-display: flex;
-align-items: center;
-justify-content: space-around;
-margin-top: 5px;
-flex-wrap: wrap;
-h2 {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5px;
+  flex-wrap: wrap;
+  h2 {
     font-size: 30px;
-}
-label {
+  }
+  label {
     width: 35%;
-}
-input {
+  }
+  input {
     width: 60%;
-}
-textarea {
+  }
+  textarea {
     width: 60%;
     height: 150px;
     resize: none;
-}
-button {
+  }
+  button {
     width: 40%;
-}
+  }
 `;

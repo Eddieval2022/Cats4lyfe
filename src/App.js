@@ -1,6 +1,11 @@
 import "./App.css";
-import { ButtonWrapper, HeadContainer, Container } from "./App.styled";
+
+
 import { faker } from "@faker-js/faker";
+
+import { ButtonWrapper, HeadContainer, Container, Footer } from "./App.styled";
+
+
 import Sidebar from "./components/Sidebar";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
@@ -9,8 +14,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 const App = () => {
-	const [breed, setBreed] = useState([]);
-	const [error, setError] = useState(null);
+  const [breed, setBreed] = useState([]);
+  const [error, setError] = useState(null);
+
 
 	const fetchFaker = () => {
 		const array = [];
@@ -73,6 +79,9 @@ const App = () => {
 			</BrowserRouter>
 		</Container>
 	);
+
+
+
 };
 
 export default App;
