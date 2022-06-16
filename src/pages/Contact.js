@@ -3,10 +3,11 @@ import { Content } from "../App.styled";
 
 const Contact = () => {
 	const ContactForm = styled.form`
-		background-color: #f4cae0;
+		background-color: var(--color-3);
 
 		width: 600px;
 		height: 280px;
+		
 		margin-top: 50px;
 		display: flex;
 		flex-wrap: wrap;
