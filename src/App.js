@@ -1,8 +1,12 @@
 import "./App.css";
-import { Container, Temp, Content } from "./App.styled";
-import Header from "./components/Header";
+import { ButtonWrapper, HeadContainer, Container } from "./App.styled";
+
 import Sidebar from "./components/Sidebar";
 import { useEffect, useState } from "react";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 const App = () => {
 	const [breed, setBreed] = useState([]);
@@ -30,18 +34,23 @@ const App = () => {
 
 	return (
 		<Container>
-			<Header />
-			<Sidebar />
+			<BrowserRouter>
+				<HeadContainer>
+					<h1>Cats4Lyfe</h1>
+					<ButtonWrapper>
+						<Link to="/">Home</Link>
+						<Link to="about">About Us</Link>
+						<Link to="contact">Contact Us</Link>
+					</ButtonWrapper>
+				</HeadContainer>
+				<Sidebar />
+				<Routes>
+					<Route path="/" element={<Home error={error} breed={breed} />} />
+					<Route path="about" element={<About />} />
+					<Route path="contact" element={<Contact />} />
+				</Routes>
+			</BrowserRouter>
 
-			<Content>
-				{error && <p>{error}</p>}
-				{breed.slice(0, 25).map((cat) => (
-					<Temp className="info" key={cat.id}>
-						<h3>Name : {cat.name}</h3>
-						<img src={cat.image["url"]} alt="cat" />
-					</Temp>
-				))}
-			</Content>
 		</Container>
 	);
 };
