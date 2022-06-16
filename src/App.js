@@ -47,6 +47,7 @@ const App = () => {
 					</ButtonWrapper>
 				</HeadContainer>
 
+
 				<Burger openMenu={openMenu} setOpenMenu={setOpenMenu} />
 				<Menu openMenu={openMenu} />
 
@@ -56,6 +57,7 @@ const App = () => {
 					<Route path="contact" element={<Contact />} />
 				</Routes>
 			</BrowserRouter>
+
 		</Container>
 	);
 };
