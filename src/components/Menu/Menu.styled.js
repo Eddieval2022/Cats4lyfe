@@ -16,21 +16,34 @@ export const StyledMenu = styled.nav`
 	right: 0;
 	transition: transform 0.3s ease-in-out;
 	border-left: #000 solid 2px;
+	border-bottom: #000 solid 2px;
 
 	transform: ${({ openMenu }) =>
 		openMenu ? "translateX(0)" : "translateX(100%)"};
-	a {
-		font-size: 2rem;
+	div {
+		display: flex;
+		font-size: 1rem;
 		text-transform: uppercase;
-		padding: 2rem 0;
+		padding: 1rem 0;
 		font-weight: bold;
 		letter-spacing: 0.5rem;
 		color: #000;
 		text-decoration: none;
 		transition: color 0.3s linear;
 	}
+	div div {
+		padding-left: 20px;
+		display: flex;
+		flex-direction: column;
+	}
 
 	&:hover {
 		color: var(--color-1);
 	}
+`;
+
+export const CatCartImage = styled.img`
+	width: 150px;
+	height: 150px;
+	border: #000 1px solid;
 `;
