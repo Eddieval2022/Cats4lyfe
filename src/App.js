@@ -43,7 +43,6 @@ const App = () => {
 						<Link to="contact">Contact Us</Link>
 					</ButtonWrapper>
 				</HeadContainer>
-
 				<Sidebar />
 				<Routes>
 					<Route path="/" element={<Home error={error} breed={breed} />} />
@@ -51,6 +50,7 @@ const App = () => {
 					<Route path="contact" element={<Contact />} />
 				</Routes>
 			</BrowserRouter>
+
 		</Container>
 	);
 };
