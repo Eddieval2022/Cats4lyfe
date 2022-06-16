@@ -1,26 +1,27 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  text-align: center;
+	text-align: center;
 
-  background-color: var(--color-1);
+	background-color: var(--color-1);
 
-  height: auto;
+	height: auto;
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 `;
 export const Content = styled.div`
-  width: calc(100vw - 100px);
-  min-height: 100vh;
+	width: calc(100vw - 100px);
+	min-height: 100vh;
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 `;
 
-export const Temp = styled.div`
+
+export const CatCard = styled.div`
   margin: 15px auto 15px -15px;
 
   width: 530px;
@@ -29,14 +30,12 @@ export const Temp = styled.div`
   border-radius: 15px;
   background-color: var(--color-3);
 
-
 	img {
     border-radius: 15px;
 		height: 300px;
 		width: 400px;
     object-fit:cover;
 	}
-
 `;
 export const HeadContainer = styled.div`
   width: 100vw;
@@ -79,7 +78,7 @@ export const ButtonWrapper = styled.div`
 		background-color: var(--color-2);
 		line-height: 300%;
 	}
-=======
+
   margin: 50px;
   width: 100%;
   height: 65px;
@@ -90,6 +89,17 @@ export const ButtonWrapper = styled.div`
     object-fit: cover;
   }
 
+
+	margin-bottom: 50px;
+	width: 400px;
+	height: 48px;
+	border-radius: 15px;
+	background-color: var(--color-3);
+	img {
+		width: 300px;
+		height: 300px;
+		object-fit: cover;
+	}
 `;
 
 export const Footer = styled.footer`

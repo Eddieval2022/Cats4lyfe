@@ -1,21 +1,27 @@
+import { useEffect, useState } from "react";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+
 import "./App.css";
 
+import { ButtonWrapper, HeadContainer, Container } from "./App.styled";
+import Burger from "./components/Burger/Burger";
 
 import { faker } from "@faker-js/faker";
 
 import { ButtonWrapper, HeadContainer, Container, Footer } from "./App.styled";
 
 
-import Sidebar from "./components/Sidebar";
-import { useEffect, useState } from "react";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+
 import Home from "./pages/Home";
+import Menu from "./components/Menu/Menu";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 const App = () => {
+
   const [breed, setBreed] = useState([]);
   const [error, setError] = useState(null);
+	const [openMenu, setOpenMenu] = useState(false);
 
 
 	const fetchFaker = () => {
@@ -27,6 +33,7 @@ const App = () => {
 		}
 		return array;
 	};
+
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -70,7 +77,11 @@ const App = () => {
 						<Link to="contact">Contact Us</Link>
 					</ButtonWrapper>
 				</HeadContainer>
-				<Sidebar />
+
+
+				<Burger openMenu={openMenu} setOpenMenu={setOpenMenu} />
+				<Menu openMenu={openMenu} />
+
 				<Routes>
 					<Route path="/" element={<Home error={error} breed={breed} />} />
 					<Route path="about" element={<About />} />
