@@ -32,8 +32,10 @@ export const Temp = styled.div`
 	background-color: var(--color-3);
 
 	img {
+    border-radius: 15px;
 		height: 300px;
-		width: 300px;
+		width: 400px;
+    object-fit:cover;
 	}
 `;
 export const HeadContainer = styled.div`

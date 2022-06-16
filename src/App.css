@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
-:root{
-  --color-1: #64A6BD;
-  --color-2: #90A8C3;
-  --color-3: #ADA7C9;
-  --color-4: #D7B9D5;
-  --color-5: #F4CAE0;
+:root {
+  --color-1: #daffef;
+  --color-2: #5c6b73;
+  --color-3: #9db4c0;
+  --color-4: #c2dfe3;
+  --color-5: #e0fbfc;
 
-  --main-font: 'Roboto', sans-serif;
+  --main-font: "Roboto", sans-serif;
 }
 
-*{
+* {
   font-family: var(--main-font);
 }
