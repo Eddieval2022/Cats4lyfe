@@ -3,11 +3,9 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 
 import "./App.css";
 
-import { ButtonWrapper, HeadContainer, Container } from "./App.styled";
+
 import Burger from "./components/Burger/Burger";
-
 import { faker } from "@faker-js/faker";
-
 import { ButtonWrapper, HeadContainer, Container, Footer } from "./App.styled";
 
 
