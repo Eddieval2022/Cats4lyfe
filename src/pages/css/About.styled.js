@@ -12,6 +12,8 @@ export const AboutWrapper = styled.div`
 
   h2 {
     text-align: justify;
+    font-family: "Lobster", cursive;
+    font-size: 30px;
   }
   img {
     width: 300px;
@@ -23,5 +25,7 @@ export const AboutWrapper = styled.div`
   p {
     width: 80%;
     text-align: center;
+    font-family: "Lobster", cursive;
+    font-size: 22px;
   }
 `;
