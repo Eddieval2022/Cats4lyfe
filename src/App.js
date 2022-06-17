@@ -20,7 +20,7 @@ const App = () => {
 
   const fetchFaker = () => {
     const array = [];
-    for (let i = 0; i < 28; i++) {
+    for (let i = 0; i < 30; i++) {
       const name = faker.name.findName();
       const price = faker.commerce.price(60, 200);
       array.push({ name, price });

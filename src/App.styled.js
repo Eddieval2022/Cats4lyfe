@@ -51,8 +51,8 @@ export const HeadContainer = styled.div`
 
   h1 {
     width: 100%;
-    padding-top: 20px;
-    font-size: 40px;
+    font-size: 50px;
+    font-family: "Lobster", cursive;
   }
 `;
 
@@ -68,6 +68,7 @@ export const ButtonWrapper = styled.div`
     -moz-appearance: button;
     appearance: button;
     font-size: 25px;
+    font-family: "Lobster", cursive;
     width: 30%;
     margin-top: 5.5px;
     margin-left: 2.5px;
