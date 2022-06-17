@@ -72,7 +72,7 @@ const App = () => {
 				</HeadContainer>
 
 				<Burger openMenu={openMenu} setOpenMenu={setOpenMenu} />
-				<Menu openMenu={openMenu} />
+				<Menu openMenu={openMenu} cart={cart} />
 
 				<Routes>
 					<Route

@@ -1,57 +1,17 @@
 import { CatCartImage, StyledMenu } from "./Menu.styled";
 
-const Menu = ({ openMenu }) => {
+const Menu = ({ openMenu, cart }) => {
 	return (
 		<StyledMenu openMenu={openMenu}>
-			<div>
-				<CatCartImage src="https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg" />
-				<div className="CatCartData">
-					<h3>Abyssinian</h3>
-					<p>£0.00</p>
+			{cart.map((cartItem) => (
+				<div key={cartItem.index}>
+					<CatCartImage src={cartItem.image} />
+					<div className="CatCartData">
+						<h3>{cartItem.name}</h3>
+						<p>{cartItem.price}</p>
+					</div>
 				</div>
-			</div>
-			<div>
-				<CatCartImage src="https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg" />
-				<div className="CatCartData">
-					<h3>Abyssinian</h3>
-					<p>£0.00</p>
-				</div>
-			</div>
-			<div>
-				<CatCartImage src="https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg" />
-				<div className="CatCartData">
-					<h3>Abyssinian</h3>
-					<p>£0.00</p>
-				</div>
-			</div>
-			<div>
-				<CatCartImage src="https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg" />
-				<div className="CatCartData">
-					<h3>Abyssinian</h3>
-					<p>£0.00</p>
-				</div>
-			</div>
-			<div>
-				<CatCartImage src="https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg" />
-				<div className="CatCartData">
-					<h3>Abyssinian</h3>
-					<p>£0.00</p>
-				</div>
-			</div>
-			<div>
-				<CatCartImage src="https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg" />
-				<div className="CatCartData">
-					<h3>Abyssinian</h3>
-					<p>£0.00</p>
-				</div>
-			</div>
-			<div>
-				<CatCartImage src="https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg" />
-				<div className="CatCartData">
-					<h3>Abyssinian</h3>
-					<p>£0.00</p>
-				</div>
-			</div>
+			))}
 		</StyledMenu>
 	);
 };
