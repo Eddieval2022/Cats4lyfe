@@ -47,3 +47,9 @@ export const CatCartImage = styled.img`
 	height: 150px;
 	border: #000 1px solid;
 `;
+
+export const Checkout = styled.div`
+	top: 0px;
+	height: 100px;
+	width: 100%;
+`;

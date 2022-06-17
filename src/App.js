@@ -17,6 +17,7 @@ const App = () => {
 	const [error, setError] = useState(null);
 	const [openMenu, setOpenMenu] = useState(false);
 	const [cart, setCart] = useState([]);
+	const [totalPrice, setTotalPrice] = useState(0);
 
 	const fetchFaker = () => {
 		const array = [];
@@ -26,6 +27,11 @@ const App = () => {
 			array.push({ name, price });
 		}
 		return array;
+	};
+	const deleteCat = (index) => {
+		let savedCat = [...cart];
+		savedCat.splice(index, 1);
+		setCart(savedCat);
 	};
 
 	useEffect(() => {
@@ -72,13 +78,21 @@ const App = () => {
 				</HeadContainer>
 
 				<Burger openMenu={openMenu} setOpenMenu={setOpenMenu} />
-				<Menu openMenu={openMenu} cart={cart} />
+				<Menu openMenu={openMenu} cart={cart} totalPrice={totalPrice} />
 
 				<Routes>
 					<Route
 						path="/"
 						element={
-							<Home error={error} breed={breed} cart={cart} setCart={setCart} />
+							<Home
+								error={error}
+								breed={breed}
+								cart={cart}
+								setCart={setCart}
+								totalPrice={totalPrice}
+								setTotalPrice={setTotalPrice}
+								deleteCat={deleteCat}
+							/>
 						}
 					/>
 					<Route path="about" element={<About />} />
