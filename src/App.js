@@ -78,7 +78,12 @@ const App = () => {
 				</HeadContainer>
 
 				<Burger openMenu={openMenu} setOpenMenu={setOpenMenu} />
-				<Menu openMenu={openMenu} cart={cart} totalPrice={totalPrice} />
+				<Menu
+					openMenu={openMenu}
+					cart={cart}
+					totalPrice={totalPrice}
+					deleteCat={deleteCat}
+				/>
 
 				<Routes>
 					<Route
@@ -91,7 +96,6 @@ const App = () => {
 								setCart={setCart}
 								totalPrice={totalPrice}
 								setTotalPrice={setTotalPrice}
-								deleteCat={deleteCat}
 							/>
 						}
 					/>

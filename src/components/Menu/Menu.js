@@ -1,6 +1,6 @@
 import { CatCartImage, Checkout, StyledMenu } from "./Menu.styled";
 
-const Menu = ({ openMenu, cart, totalPrice, deleteCat }) => {
+const Menu = ({ openMenu, cart, totalPrice, deleteCat, index }) => {
 	return (
 		<StyledMenu openMenu={openMenu}>
 			<Checkout>
