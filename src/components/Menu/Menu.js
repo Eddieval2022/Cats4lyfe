@@ -9,7 +9,7 @@ const Menu = ({ openMenu, cart, totalPrice }) => {
 				<button
 					onClick={() =>
 						alert(
-							`Your cats are currently being launched from our specially designed trebuchets and should be with you within the next 20 minutes assuming ideal weather conditions. \n\nYour bank has been charged £${totalPrice} and there are no refunds or returns under any circumstances`
+							`Your cats are currently being launched from our specially designed CAT-apult and should be with you within the next 20 minutes assuming ideal weather conditions. \n\nYour bank has been charged £${totalPrice} and there are no refunds or returns under any circumstances`
 						)
 					}
 				>
