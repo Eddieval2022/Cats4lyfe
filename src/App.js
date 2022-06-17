@@ -28,11 +28,6 @@ const App = () => {
 		}
 		return array;
 	};
-	const deleteCat = (index) => {
-		let savedCat = [...cart];
-		savedCat.splice(index, 1);
-		setCart(savedCat);
-	};
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -78,12 +73,7 @@ const App = () => {
 				</HeadContainer>
 
 				<Burger openMenu={openMenu} setOpenMenu={setOpenMenu} />
-				<Menu
-					openMenu={openMenu}
-					cart={cart}
-					totalPrice={totalPrice}
-					deleteCat={deleteCat}
-				/>
+				<Menu openMenu={openMenu} cart={cart} totalPrice={totalPrice} />
 
 				<Routes>
 					<Route

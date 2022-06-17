@@ -1,6 +1,6 @@
 import { CatCartImage, Checkout, StyledMenu } from "./Menu.styled";
 
-const Menu = ({ openMenu, cart, totalPrice, deleteCat, index }) => {
+const Menu = ({ openMenu, cart, totalPrice}) => {
 	return (
 		<StyledMenu openMenu={openMenu}>
 			<Checkout>
@@ -12,7 +12,15 @@ const Menu = ({ openMenu, cart, totalPrice, deleteCat, index }) => {
 					<div className="CatCartData">
 						<h3>{cartItem.name}</h3>
 						<p>{cartItem.price}</p>
-						<button onClick={() => deleteCat(index)}>Remove</button>
+						<button
+							onClick={() =>
+								alert(
+									"The cats are monitoring the customers carts, we couldn't bear to see their hearts break at being chosen and then rejected, so we decided to remove the option to remove them from your cart, we hope you understand."
+								)
+							}
+						>
+							Remove
+						</button>
 					</div>
 				</div>
 			))}
