@@ -35,6 +35,7 @@ export const StyledMenu = styled.nav`
 		padding-left: 20px;
 		display: flex;
 		flex-direction: column;
+		width: 70%;
 	}
 
 	&:hover {
@@ -49,7 +50,14 @@ export const CatCartImage = styled.img`
 `;
 
 export const Checkout = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: right;
 	top: 0px;
 	height: 100px;
 	width: 100%;
+	button {
+		width: 45%;
+	}
 `;

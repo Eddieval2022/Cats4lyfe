@@ -1,10 +1,20 @@
 import { CatCartImage, Checkout, StyledMenu } from "./Menu.styled";
 
-const Menu = ({ openMenu, cart, totalPrice}) => {
+const Menu = ({ openMenu, cart, totalPrice }) => {
 	return (
 		<StyledMenu openMenu={openMenu}>
 			<Checkout>
 				<h4>Total Cost: £{totalPrice}</h4>
+				<br />
+				<button
+					onClick={() =>
+						alert(
+							`Your cats are currently being launched from our specially designed trebuchets and should be with you within the next 20 minutes assuming ideal weather conditions. \n\nYour bank has been charged £${totalPrice} and there are no refunds or returns under any circumstances`
+						)
+					}
+				>
+					Place order!
+				</button>
 			</Checkout>
 			{cart.map((cartItem) => (
 				<div key={cartItem.index}>
