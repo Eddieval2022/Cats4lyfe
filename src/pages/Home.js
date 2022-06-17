@@ -1,5 +1,6 @@
 // import { Item } from "framer-motion/types/components/Reorder/Item";
 import { Content, CatCard } from "../App.styled";
+
 // setCart(item.name, item.image, item.price)
 const Home = ({ error, breed, cart, setCart, totalPrice, setTotalPrice }) => {
 	return (
@@ -31,6 +32,7 @@ const Home = ({ error, breed, cart, setCart, totalPrice, setTotalPrice }) => {
 			))}
 		</Content>
 	);
+
 };
 
 export default Home;

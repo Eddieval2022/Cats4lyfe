@@ -1,25 +1,24 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-	text-align: center;
+  text-align: center;
 
-	background-color: var(--color-1);
+  background-color: var(--color-1);
 
-	height: auto;
+  height: fit-content;
 
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 `;
 export const Content = styled.div`
-	width: calc(100vw - 100px);
-	min-height: 100vh;
+  width: calc(100vw - 100px);
+  min-height: 100vh;
 
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 `;
-
 
 export const CatCard = styled.div`
   margin: 15px auto 15px -15px;
@@ -30,15 +29,15 @@ export const CatCard = styled.div`
   border-radius: 15px;
   background-color: var(--color-3);
 
-	img {
+  img {
     border-radius: 15px;
-		height: 300px;
-		width: 400px;
-    object-fit:cover;
-	}
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+  }
 `;
 export const HeadContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 142px;
 
   display: flex;
@@ -46,40 +45,47 @@ export const HeadContainer = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 6%;
 
   background-color: var(--color-2);
 
   h1 {
     width: 100%;
-    font-size: 40px;
+    font-size: 50px;
+    font-family: "Lobster", cursive;
   }
 `;
 
 export const ButtonWrapper = styled.div`
-	width: 30%;
-	height: 20%;
-	padding-bottom: 10px;
-	a {
-		-moz-appearance: button;
-		appearance: button;
-		font-size: 25px;
-		width: 30%;
-		margin-left: 2.5px;
-		margin-right: 2.5px;
-		height: 50px;
-		border: #000 1px solid;
-		padding: 5.5px;
-		border-radius: 10px;
+  width: 30%;
+  height: 20%;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  a {
+    -moz-appearance: button;
+    appearance: button;
+    font-size: 25px;
+    font-family: "Lobster", cursive;
+    width: 30%;
+    margin-top: 5.5px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    height: 50px;
+    border: #000 1px solid;
+    padding-bottom: 18px;
+    border-radius: 10px;
 
-		text-align: center;
-		text-decoration: none;
-		color: inherit;
-		background-color: var(--color-2);
-		line-height: 300%;
-	}
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    background-color: var(--color-2);
+    line-height: 300%;
+  }
 
-  margin: 50px;
+  margin: 40px;
   width: 100%;
   height: 65px;
   background-color: var(--color-3);
@@ -89,17 +95,16 @@ export const ButtonWrapper = styled.div`
     object-fit: cover;
   }
 
-
-	margin-bottom: 50px;
-	width: 400px;
-	height: 48px;
-	border-radius: 15px;
-	background-color: var(--color-3);
-	img {
-		width: 300px;
-		height: 300px;
-		object-fit: cover;
-	}
+  margin-bottom: 60px;
+  width: 50%;
+  height: 58px;
+  border-radius: 15px;
+  background-color: var(--color-3);
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
 `;
 
 export const Footer = styled.footer`

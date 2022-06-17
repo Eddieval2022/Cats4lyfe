@@ -4,6 +4,7 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 import Burger from "./components/Burger/Burger";
+
 import { faker } from "@faker-js/faker";
 import { ButtonWrapper, HeadContainer, Container, Footer } from "./App.styled";
 
@@ -13,6 +14,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 const App = () => {
+
 	const [breed, setBreed] = useState([]);
 	const [error, setError] = useState(null);
 	const [openMenu, setOpenMenu] = useState(false);
@@ -93,8 +95,9 @@ const App = () => {
 					<Route path="contact" element={<Contact />} />
 				</Routes>
 			</BrowserRouter>
+<Footer>Copyright 2022</Footer>
 		</Container>
 	);
-};
+
 
 export default App;
