@@ -1,6 +1,6 @@
 import { CatCartImage, Checkout, StyledMenu } from "./Menu.styled";
 
-const Menu = ({ openMenu, cart, totalPrice }) => {
+const Menu = ({ openMenu, cart, totalPrice, deleteCat, index }) => {
 	return (
 		<StyledMenu openMenu={openMenu}>
 			<Checkout>
@@ -15,6 +15,7 @@ const Menu = ({ openMenu, cart, totalPrice }) => {
 				>
 					Place order!
 				</button>
+				<button onClick={() => deleteCat(index)}>Clear Cart</button>
 			</Checkout>
 			{cart.map((cartItem) => (
 				<div key={cartItem.index}>
